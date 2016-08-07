@@ -1713,7 +1713,7 @@ Based on [airbnb style guide](https://github.com/airbnb/javascript)
 ## Comments
 
   <a name="comments--multiline"></a><a name="17.1"></a>
-  - [17.1](#comments--multiline) Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
+  - [17.1](#comments--multiline) Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values. Prefer [Google Closure Compiler Annotations](https://developers.google.com/closure/compiler/docs/js-for-compiler).  
 
     ```javascript
     // bad
@@ -1821,7 +1821,7 @@ Based on [airbnb style guide](https://github.com/airbnb/javascript)
 ## Whitespace
 
   <a name="whitespace--spaces"></a><a name="18.1"></a>
-  - [18.1](#whitespace--spaces) Use soft tabs set to 2 spaces. eslint: [`indent`](http://eslint.org/docs/rules/indent.html) jscs: [`validateIndentation`](http://jscs.info/rule/validateIndentation)
+  - [18.1](#whitespace--spaces) Use soft tabs set to 4 spaces. eslint: [`indent`](http://eslint.org/docs/rules/indent.html) jscs: [`validateIndentation`](http://jscs.info/rule/validateIndentation)
 
     ```javascript
     // bad
@@ -2605,8 +2605,8 @@ Based on [airbnb style guide](https://github.com/airbnb/javascript)
 
 ## ECMAScript 6 Styles
 
-  <a name="es6-styles"></a><a name="27.1"></a>
-  - [27.1](#es6-styles) This is a collection of links to the various ES6 features.
+  <a name="es6-styles"></a><a name="25.1"></a>
+  - [25.1](#es6-styles) This is a collection of links to the various ES6 features.
 
 1. [Arrow Functions](#arrow-functions)
 1. [Classes](#constructors)
@@ -2626,8 +2626,8 @@ Based on [airbnb style guide](https://github.com/airbnb/javascript)
 
 ## Testing
 
-  <a name="testing--yup"></a><a name="28.1"></a>
-  - [28.1](#testing--yup) **Yup.**
+  <a name="testing--yup"></a><a name="26.1"></a>
+  - [26.1](#testing--yup) **Yup.**
 
     ```javascript
     function foo() {
@@ -2635,12 +2635,12 @@ Based on [airbnb style guide](https://github.com/airbnb/javascript)
     }
     ```
 
-  <a name="testing--for-real"></a><a name="28.2"></a>
-  - [28.2](#testing--for-real) **No, but seriously**:
+  <a name="testing--for-real"></a><a name="26.2"></a>
+  - [26.2](#testing--for-real) **No, but seriously**:
    - Whichever testing framework you use, you should be writing tests!
    - Strive to write many small pure functions, and minimize where mutations occur.
    - Be cautious about stubs and mocks - they can make your tests more brittle.
-   - We primarily use [`mocha`](https://www.npmjs.com/package/mocha) at Airbnb. [`tape`](https://www.npmjs.com/package/tape) is also used occasionally for small, separate modules.
+   - We primarily use [`jasmine`](http://jasmine.github.io/) and [`karma`](https://karma-runner.github.io/1.0/index.html) as a test runner.
    - 100% test coverage is a good goal to strive for, even if it's not always practical to reach it.
    - Whenever you fix a bug, _write a regression test_. A bug fixed without a regression test is almost certainly going to break again in the future.
 
